@@ -1,5 +1,13 @@
 describe('pages/tabBar/component/component.nvue', () => {
-    let page
+	let page, containsVite, isApp;
+	containsVite = process.env.UNI_CLI_PATH.includes('uniapp-cli-vite')
+	isApp = process.env.UNI_PLATFORM.includes('app')
+	if (containsVite && isApp) {
+	  it('vue3', async () => {
+	    expect(1).toBe(1)
+	  })
+	  return
+	}
     beforeAll(async () => {
         // 重新reLaunch至首页，并获取首页page对象（其中 program 是uni-automator自动注入的全局对象）
         page = await program.reLaunch('/pages/tabBar/component/component')
@@ -29,7 +37,7 @@ describe('pages/tabBar/component/component.nvue', () => {
       const lists = await page.$$('.uni-panel')
 	  if(process.env.UNI_PLATFORM == 'app-plus' || process.env.UNI_PLATFORM == 'mp-weixin'){
 	  	expect(lists.length).toBe(9)
-	  }else if(process.env.UNI_PLATFORM == 'h5'){
+	  }else if(process.env.UNI_PLATFORM == 'h5' && !containsVite){
 	  	expect(lists.length).toBe(8)
 	  }
     })

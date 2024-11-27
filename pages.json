@@ -1321,10 +1321,44 @@
 				},
 				// #endif
 				// #endif
+				// #ifdef APP-PLUS || H5
+				{
+					"path" : "renderjs/renderjs",
+					"style" :
+					{
+						"navigationBarTitleText" : "renderjs"
+					}
+				},
+				// #endif
 				{
 					"path": "global/global",
 					"style": {
 						"navigationBarTitleText": "GlobalData和vuex"
+					}
+				},
+				// #ifdef VUE3
+				{
+					"path" : "pinia/pinia",
+					"style" :
+					{
+						"navigationBarTitleText" : "pinia"
+					}
+				},
+				// #endif
+				// #ifdef APP
+				{
+					"path" : "vuex-nvue/vuex-nvue",
+					"style" :
+					{
+						"navigationBarTitleText" : "vuex-nvue"
+					}
+				},
+				// #endif
+				{
+					"path" : "vuex-vue/vuex-vue",
+					"style" :
+					{
+						"navigationBarTitleText" : "vuex-vue"
 					}
 				}
 			]

@@ -122,6 +122,26 @@
 						name: 'GlobalData和vuex',
 						url: 'global'
 					},
+					// #ifdef APP-NVUE
+					{
+						name: 'vuex-nvue',
+						url: 'vuex-nvue'
+					},
+					// #endif
+					{
+						name: 'vuex-vue',
+						url: 'vuex-vue'
+					},
+					// #ifdef VUE3
+					{
+						name: 'pinia',
+						url: 'pinia'
+					},
+					// #endif
+					{
+						name: 'renderjs',
+						url: 'renderjs'
+					},
 					// #ifdef APP-PLUS
 					{
 						name: '问题反馈',
